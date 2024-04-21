@@ -6,14 +6,10 @@ import re
 import time
 from tqdm import tqdm
 import random
-from notion_client import Client
+
 
 client = OpenAI()
 
-notion_token = 'secret_5C4IHyThkjKAp69mrW8mfStb78LSKjzZqLlOa1Y6NlZ'
-notion_page_id = '1d913f45a7994e04b09b3b2fe67111e5'
-
-notion = Client(auth=notion_token)
 
 # Major Arcana
 major_arcana = [
