@@ -1,7 +1,6 @@
 import streamlit as st
 from openai import OpenAI
 import random
-import time
 
 # Initialize your API key using Streamlit secrets
 openai_api_key = st.secrets["openai"]["api_key"]
@@ -55,9 +54,7 @@ if st.button("Draw Tarot Cards and Generate Reading"):
 
     # Display the results
     st.text(f"Context: {context} ({', '.join(tarot_draw)})")
-    st.text(f"Date and Time of Reading: {current_datetime}")
     st.text(f"Model: GPT-4, Temperature: 1")
-    st.text(f"Date and Time of Log Entry: {current_datetime}")
     st.subheader("Your Tarot Cards:")
     st.write(tarot_reading)
     st.text("========End of Reading========")
