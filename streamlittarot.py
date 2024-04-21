@@ -54,7 +54,22 @@ if st.button("Draw Tarot Cards and Generate Reading"):
     tarot_reading = generate_tarot_reading(tarot_draw, context)
 
     # Display the results
+        st.text(f"Context: {context} ({', '.join(tarot_draw)})")
+    st.text(f"Date and Time of Reading: {current_datetime}")
+    st.text(f"Model: GPT-4, Temperature: 1")
+    st.text(f"Date and Time of Log Entry: {current_datetime}")
     st.subheader("Your Tarot Cards:")
-    st.write(", ".join(tarot_draw))
     st.subheader("Tarot Reading:")
     st.write(tarot_reading)
+
+
+    
+    # Log the results in the app
+    st.subheader("Reading Details:")
+    st.text(f"Context: {context} ({', '.join(tarot_draw)})")
+    st.text(f"Date and Time of Reading: {current_datetime}")
+    st.text(f"Model: GPT-4, Temperature: 1")
+    st.text(f"Date and Time of Log Entry: {current_datetime}")
+    st.subheader("Tarot Reading:")
+    st.write(tarot_reading)
+    st.text("========End of Reading========")
