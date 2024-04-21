@@ -41,7 +41,7 @@ def generate_tarot_reading(tarot_draw, context):
     return response.choices[0].message.content
 
 # Streamlit Layout
-st.title("Tarot Card Reading App")
+st.title("Thesis Antithesis Synthesis Tarot Reading App")
 
 # User inputs
 context = st.text_input("Please provide the context of the reading:", "")
